@@ -33,6 +33,8 @@ jobs:
           sudo yum install httpd -y
       continue-on-error: true
     - name: Httpd checks
-      run: sudo curl http://localhost:80
+      run:  |
+       sudo yum list installed | sudo grep httpd
+       sudo lsof -i -P -n | sudo grep LISTEN
 
  
