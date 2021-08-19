@@ -30,7 +30,7 @@ jobs:
     #    cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
     - name : Terraform Install
       run: |
-          su - root
+          su - kondalu
           yum install -y yum-utils
           yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
           yum -y install terraform
