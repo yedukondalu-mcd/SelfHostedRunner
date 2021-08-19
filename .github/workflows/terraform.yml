@@ -31,5 +31,6 @@ jobs:
     - name : Terraform Install
       run: |
           sudo yum install httpd -y
+          sudo curl http://localhost:80
 
  
